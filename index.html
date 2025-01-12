@@ -35,8 +35,7 @@
         Halo <span x-text="nama"></span>
       </h1>
     </div> -->
-
-    <div
+    <!-- <div
       x-data="{nama : 'Abdullah Muchsin', number:3}"
       class="container mx-auto w-1/2 text-center mt-10 bg-lime-200 p-10 rounded-xl shadow"
     >
@@ -44,6 +43,16 @@
         class="text-3xl font-bold bg-gradient-to-r from-blue-500 to-pink-400 bg-clip-text text-transparent drop-shadow-sm"
       >
         Angkat <span x-text="number"></span> adalah bilangan <span x-text="number % 2 === 0 ? 'Genap' : 'Ganjil'"></span>
+      </h1>
+    </div> -->
+    <div
+      x-data="{nama : 'Abdullah Muchsin', number:3, link:'<a href=\'https://github.com/AbdullahMuchsin\'>Abdullah Muchsin</a>' }"
+      class="container mx-auto w-1/2 text-center mt-10 bg-lime-200 p-10 rounded-xl shadow"
+    >
+      <h1
+        class="text-3xl font-bold bg-gradient-to-r from-blue-500 to-pink-400 bg-clip-text text-transparent drop-shadow-sm"
+      >
+      Halo <span x-text="link"></span>
       </h1>
     </div>
 
