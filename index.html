@@ -45,7 +45,7 @@
         Angkat <span x-text="number"></span> adalah bilangan <span x-text="number % 2 === 0 ? 'Genap' : 'Ganjil'"></span>
       </h1>
     </div> -->
-    <div
+    <!-- <div
       x-data="{nama : 'Abdullah Muchsin', number:3, link:'<a href=\'https://github.com/AbdullahMuchsin\'>Abdullah Muchsin</a>' }"
       class="container mx-auto w-1/2 text-center mt-10 bg-lime-200 p-10 rounded-xl shadow"
     >
@@ -54,7 +54,19 @@
       >
       Halo <span x-html="link"></span>
       </h1>
+    </div> -->
+    <div
+      x-data="{nama : 'Abdullah Muchsin', number:3, link:'<a href=\'https://github.com/AbdullahMuchsin\'>Abdullah Muchsin</a>' }"
+      class="container mx-auto w-1/2 text-center mt-10 bg-lime-200 p-10 rounded-xl shadow"
+    >
+  
+    <button class="py-2 px-5 bg-slate-500 text-white rounded-md">Buka</button>
+
+    <div class="w-3/4 mx-auto mt-4 p-5 bg-blue-400 rounded text-white">
+      Lorem ipsum dolor sit amet.
     </div>
+
+  </div>
 
     <script>
       document.addEventListener("alpine:init", () => {
