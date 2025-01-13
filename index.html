@@ -61,12 +61,15 @@
     >
       <button
         @click="open = !open"
-        class="py-2 px-5 bg-slate-500 text-white rounded-md"
+        x-text="open ? 'Tutup' : 'Buka'"
+        x-bind:class="open ? 'bg-violet-500' : 'bg-slate-500'"
+        class="py-2 px-5 text-white rounded-md"
+
       >
         Buka
       </button>
 
-      <div x-show="open" class="w-3/4 mx-auto mt-4 p-5 bg-blue-400 rounded text-white">
+      <div x-show="open" x-transition:enter.duration.1000ms  x-transition:leave.duration.400ms class="w-3/4 mx-auto mt-4 p-5 bg-blue-400 rounded text-white">
         Lorem ipsum dolor sit amet.
       </div>
       <!-- <template x-if="open">
