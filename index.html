@@ -59,11 +59,23 @@
       x-data="{nama : 'Abdullah Muchsin', number:3, link:'<a href=\'https://github.com/AbdullahMuchsin\'>Abdullah Muchsin</a>', open:false }"
       class="container mx-auto w-1/2 text-center mt-10 bg-lime-200 p-10 rounded-xl shadow"
     >
-      <button @click="open = !open" class="py-2 px-5 bg-slate-500 text-white rounded-md">Buka</button>
+      <button
+        @click="open = !open"
+        class="py-2 px-5 bg-slate-500 text-white rounded-md"
+      >
+        Buka
+      </button>
 
       <div x-show="open" class="w-3/4 mx-auto mt-4 p-5 bg-blue-400 rounded text-white">
         Lorem ipsum dolor sit amet.
       </div>
+      <!-- <template x-if="open">
+        <div
+          class="w-3/4 mx-auto mt-4 p-5 bg-blue-400 rounded text-white"
+        >
+          Lorem ipsum dolor sit amet.
+        </div>
+      </template> -->
     </div>
 
     <script>
