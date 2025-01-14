@@ -64,12 +64,16 @@
         x-text="open ? 'Tutup' : 'Buka'"
         x-bind:class="open ? 'bg-violet-500' : 'bg-slate-500'"
         class="py-2 px-5 text-white rounded-md"
-
       >
         Buka
       </button>
 
-      <div x-show="open" x-transition:enter.duration.1000ms  x-transition:leave.duration.400ms class="w-3/4 mx-auto mt-4 p-5 bg-blue-400 rounded text-white">
+      <div
+        x-show="open"
+        x-transition:enter.duration.1000ms
+        x-transition:leave.duration.400ms
+        class="w-3/4 mx-auto mt-4 p-5 bg-blue-400 rounded text-white"
+      >
         Lorem ipsum dolor sit amet.
       </div>
       <!-- <template x-if="open">
@@ -79,6 +83,18 @@
           Lorem ipsum dolor sit amet.
         </div>
       </template> -->
+    </div>
+
+    <div
+      x-data="{nama : 'Abdullah Muchsin', number:3, link:'<a href=\'https://github.com/AbdullahMuchsin\'>Abdullah Muchsin</a>', open:false }"
+      class="container mx-auto w-1/2 text-center mt-10 bg-pink-200 p-10 rounded-xl shadow"
+    >
+      <button
+        x-on:click="alert('Terima kasih sudah diklik!')"
+        class="py-2 px-5 text-white rounded-md bg-blue-400"
+      >
+        Klik Saya
+      </button>
     </div>
 
     <script>
