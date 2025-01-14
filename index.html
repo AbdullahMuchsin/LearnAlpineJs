@@ -57,6 +57,8 @@
     </div> -->
     <div
       x-data="{nama : 'Abdullah Muchsin', number:3, link:'<a href=\'https://github.com/AbdullahMuchsin\'>Abdullah Muchsin</a>', open:false }"
+      @click.outside="open = false"
+      
       class="container mx-auto w-1/2 text-center mt-10 bg-lime-200 p-10 rounded-xl shadow"
     >
       <button
@@ -99,10 +101,14 @@
     </div> -->
 
     <div
+      @click="alert('Div ditekan')"
       x-data="{nama : 'Abdullah Muchsin', number:3, link:'<a href=\'https://github.com/AbdullahMuchsin\'>Abdullah Muchsin</a>', open:false }"
       class="container mx-auto w-3/4 text-center mt-10 bg-pink-200 p-10 rounded-xl shadow"
     >
-      <form action="/post-data" @submit.prevent="alert('Data berhasil dikirim!')">
+      <form
+        action="/post-data"
+        @submit.prevent="alert('Data berhasil dikirim!')"
+      >
         <label class="text-sm font-medium text-gray-900 block mb-2"
           >Masukkan Teks</label
         >
@@ -112,10 +118,11 @@
           class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
         />
         <button
-        type="submit"
-        class="py-2 px-5 text-white rounded-md bg-slate-400 mt-3"
-      >Kirim</button>
-
+          @click.stop="alert('Button ditekan')"
+          class="py-2 px-5 text-white rounded-md bg-slate-400 mt-3"
+        >
+          Kirim
+        </button>
       </form>
     </div>
 
