@@ -90,7 +90,7 @@
       class="container mx-auto w-1/2 text-center mt-10 bg-pink-200 p-10 rounded-xl shadow"
     >
       <button
-        x-on:click="$event.target.classList.add('bg-red-500')"
+        x-on:click="ubahWarna"
         class="py-2 px-5 text-white rounded-md bg-blue-400"
       >
         Klik Saya
@@ -116,6 +116,10 @@
           nama: ["Muchsin", "Wafa", "Ali"],
         });
       });
+
+      function ubahWarna(e) {
+        e.target.classList.add('bg-violet-500');
+      }
     </script>
   </body>
 </html>
