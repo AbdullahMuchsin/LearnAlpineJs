@@ -57,8 +57,7 @@
     </div> -->
     <div
       x-data="{nama : 'Abdullah Muchsin', number:3, link:'<a href=\'https://github.com/AbdullahMuchsin\'>Abdullah Muchsin</a>', open:false }"
-      @click.outside="open = false"
-      
+      @keyup.slash.window="open = false"      
       class="container mx-auto w-1/2 text-center mt-10 bg-lime-200 p-10 rounded-xl shadow"
     >
       <button
@@ -114,7 +113,7 @@
         >
         <input
           type="text"
-          @keyup.enter.shift="alert('Kolom sudah diisi!')"
+          @keyup.debounce.500ms="console.log($event.target.value)"
           class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
         />
         <button
