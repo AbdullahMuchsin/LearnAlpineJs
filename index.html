@@ -85,19 +85,19 @@
       </template> -->
     </div>
 
-    <!-- <div
+    <div
       x-data="{nama : 'Abdullah Muchsin', number:3, link:'<a href=\'https://github.com/AbdullahMuchsin\'>Abdullah Muchsin</a>', open:false }"
       class="container mx-auto w-1/2 text-center mt-10 bg-pink-200 p-10 rounded-xl shadow"
     >
       <button
-        x-on:click="alert('Terima kasih sudah diklik!')"
+        x-on:click="$event.target.classList.add('bg-red-500')"
         class="py-2 px-5 text-white rounded-md bg-blue-400"
       >
         Klik Saya
       </button>
-    </div> -->
+    </div>
 
-    <div
+    <!-- <div
       x-data="{nama : 'Abdullah Muchsin', number:3, link:'<a href=\'https://github.com/AbdullahMuchsin\'>Abdullah Muchsin</a>', open:false }"
       class="container mx-auto w-3/4 text-center mt-10 bg-pink-200 p-10 rounded-xl shadow"
     >
@@ -105,9 +105,9 @@
         >Masukkan Teks</label
       >
       <input type="text" 
-      @keyup.enter="alert('Kolom sudah diisi!')"
+      @keyup.enter.shift="alert('Kolom sudah diisi!')"
       class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-    </div>
+    </div> -->
 
     <script>
       document.addEventListener("alpine:init", () => {
